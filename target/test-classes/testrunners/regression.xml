@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+
+    <test name="Test" thread-count="5">
+        <classes>
+            <class name="com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF"/>
+            <class name="com.adactinhotelapp.tests.ValidateSearchHotelPagePF"/>
+        </classes>
+    </test>
+
+</suite>
