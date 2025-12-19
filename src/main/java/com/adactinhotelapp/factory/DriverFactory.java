@@ -1,10 +1,13 @@
 package com.adactinhotelapp.factory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -55,8 +58,11 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 		ChainTestListener.log("Properties file has been initialized");
-		return configProp;
-		
-		
+		return configProp;	
+	}
+	
+	public File getScreenshotFile() {
+		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		return srcFile;
 	}
 }

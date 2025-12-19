@@ -22,7 +22,7 @@ public class ValidateLoginUsingPOMUsingPF extends BaseTest {
 		lp.usernameTextbox(dataMap.get("Username"));
 		lp.passwordTextbox(dataMap.get("Password"));
 		lp.loginButton();
-		Assert.assertEquals(lp.getTitle(),AppConstants.LOGIN_PAGE_TITLE); 
+		Assert.assertEquals(lp.getTitle(),AppConstants.SEARCH_HOTEL_PAGE_TITLE); 
 		
 	}
 	

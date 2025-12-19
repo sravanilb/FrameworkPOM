@@ -1,87 +1,135 @@
-<html>
-<head>
-<title>TestNG:  Test</title>
-<link href="../testng.css" rel="stylesheet" type="text/css" />
-<link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
-</style>
-<script type="text/javascript">
-<!--
-function flip(e) {
-  current = e.style.display;
-  if (current == 'block') {
-    e.style.display = 'none';
-    return 0;
-  }
-  else {
-    e.style.display = 'block';
-    return 1;
-  }
-}
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>ChainTest</title>
+    <style type="text/css">
+      body { font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", Arial, sans-serif; font-size: 13px; }
+      .bg-passed { background-color: rgb(168, 217, 167); }
+      .text-passed { color: #79B530; }
+      .bg-failed,.bg-undefined { background-color: rgb(254, 205, 204); }
+      .text-failed,.text-undefined { color: #e64b5d; }
+      .bg-skipped { background-color: #eee; }
+      .text-skipped { color: #e6e04c; }
+      .tag { background-color:#f6f7f9; }
+      pre {white-space: pre-wrap; margin-bottom: 0; max-height: 15rem; overflow-y: auto; }
+    </style>
+  </head>
+  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" bgcolor="#F7F8F9" style="box-sizing:border-box;margin:0;padding:0;width:100%;word-break:break-word;-webkit-font-smoothing:antialiased;">
+    <!-- title -->
+    <table class="wrapper" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tr>
+        <td align="center">
+          <table>
+            <tr>
+              <td width="650">
+                <table style="padding: 20px;">
+                  <tr>
+                    <td>
+                      <span class="bg-failed" style="margin-right:10px;padding:0px 5px;">FAILED</span>
+                      <span style="">18-Dec-2025, 7:10:02 pm &middot; 24s</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
 
-function toggleBox(szDivId, elem, msg1, msg2)
-{
-  var res = -1;  if (document.getElementById) {
-    res = flip(document.getElementById(szDivId));
-  }
-  else if (document.all) {
-    // this is the way old msie versions work
-    res = flip(document.all[szDivId]);
-  }
-  if(elem) {
-    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
-  }
+    <!-- stats -->
+    <table align="center" width="650" style="margin-bottom:2px;">
+	  <tbody>
+	    <tr>
+	      <td align="center" bgcolor="#FFFFFF">
+	        <table width="100%">
+	          <tbody>
+	            <tr>
+	              <td width="100" style="padding:30px 40px 20px;">
+	                <p style="font-weight:500;color:#7E7E7E;margin:0;">Tests</p>
+	                <h1 style="font-size:34px;">2</h1>
+	              </td>
+                <td width="100" style="padding:30px 40px 20px;">
+	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#79B530">Passed</p>
+	                <h1 style="font-size:34px;">0</h1>
+	              </td>
+                <td width="100" style="padding:30px 40px 20px;">
+	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e64b5d">Failed</p>
+	                <h1 style="font-size:34px;">2</h1>
+	              </td>
+                <td width="100" style="padding:30px 40px 20px;">
+	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e6e04c">Skipped</p>
+	                <h1 style="font-size:34px;">0</h1>
+	              </td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
 
-}
+    <!-- tags -->
+    <table width="100%">
+      <tr>
+        <td align="center">
+          <table width="650">
+            <tr>
+              <td bgcolor="#FFFFFF" style="padding:20px 40px;font-size:14px;">
+                <span style="font-size:15px;font-weight:500;">Tags</span>
+                <table><tr><td style="height:10px;"></td></tr></table>
+                <table>
+                  <tr style="font-weight:500;">
+                    <td width="250">Name</td>
+                    <td width="23"></td>
+                    <td style="" width="60">Pass</td>
+                    <td class="padding" width="10"></td>
+                    <td style="" width="60">Fail</td>
+                    <td class="padding" width="10"></td>
+                    <td style="" width="60">Skip</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
 
-function toggleAllBoxes() {
-  if (document.getElementsByTagName) {
-    d = document.getElementsByTagName('div');
-    for (i = 0; i < d.length; i++) {
-      if (d[i].className == 'log') {
-        flip(d[i]);
-      }
-    }
-  }
-}
-
-// -->
-</script>
-
-</head>
-<body>
-<h2 align='center'>Test</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
-</tr><tr>
-<td>Started on:</td><td>Thu Dec 18 19:10:02 IST 2025</td>
-</tr>
-<tr><td>Total time:</td><td>23 seconds (23817 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF.ValidateLoginTest()'><b>ValidateLoginTest</b><br>Test class: com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF<br>Parameters: {Username=reyaz0806, Password=reyaz123}</td>
-<td><div><pre>java.lang.AssertionError: expected [Adactin.com - Search Hotel] but found [Adactin.com - Hotel Reservation System]
-	at com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF.ValidateLoginTest(ValidateLoginUsingPOMUsingPF.java:25)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace777748410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace777748410'><pre>java.lang.AssertionError: expected [Adactin.com - Search Hotel] but found [Adactin.com - Hotel Reservation System]
+    <!-- tests -->
+    <table width="100%">
+      <tr>
+        <td align="center">
+          <table width="650">
+            <tr>
+              <td bgcolor="#FFF" style="padding:10px 20px;">
+                <table>
+                  <tr>
+                    <td width="650px" style="padding:10px;">
+                      <p class="text-failed" style="font-size:14px;font-weight:500;margin:0;margin-bottom:5px;">
+                        Suite
+                      <p style="font-size:12px;margin:0;">
+                        <span>18-Dec-2025, 7:10:02 pm / 23s</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        ValidateLoginTest
+<pre>java.lang.AssertionError: expected [Adactin.com - Search Hotel] but found [Adactin.com - Hotel Reservation System]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -117,45 +165,29 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF@4dc27487</td></tr>
-<tr>
-<td title='com.adactinhotelapp.tests.ValidateSearchHotelPagePF.ValidateSearchHotelTest()'><b>ValidateSearchHotelTest</b><br>Test class: com.adactinhotelapp.tests.ValidateSearchHotelPagePF<br>Parameters: {Location=Sydney}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@name=&apos;location&apos;]&quot;}
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
+                      <p style="font-size:13px;margin:0;">
+                        com.adactinhotelapp.tests.ValidateSearchHotelPagePF
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
+                      <p style="font-size:13px;margin:0;">
+                        ValidateSearchHotelTest
+<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='location']"}
   (Session info: chrome=143.0.7499.147)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9719fcb218bc828c81b97b812b52721f, findElement {using=xpath, value=//select[@name=&apos;location&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.147, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59893}, goog:processID: 15512, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59893/devtoo..., se:cdpVersion: 143.0.7499.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9719fcb218bc828c81b97b812b52721f
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-	at com.adactinhotelapp.pages.SearchHotelPage.locationDropDown(SearchHotelPage.java:29)
-	at com.adactinhotelapp.tests.ValidateSearchHotelPagePF.ValidateSearchHotelTest(ValidateSearchHotelPagePF.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1463877470", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1463877470'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@name=&apos;location&apos;]&quot;}
-  (Session info: chrome=143.0.7499.147)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9719fcb218bc828c81b97b812b52721f, findElement {using=xpath, value=//select[@name=&apos;location&apos;]}]
+Command: [9719fcb218bc828c81b97b812b52721f, findElement {using=xpath, value=//select[@name='location']}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.147, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59893}, goog:processID: 15512, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59893/devtoo..., se:cdpVersion: 143.0.7499.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 9719fcb218bc828c81b97b812b52721f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -207,9 +239,18 @@ Session ID: 9719fcb218bc828c81b97b812b52721f
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>com.adactinhotelapp.tests.ValidateSearchHotelPagePF@7d3e8655</td></tr>
-</table><p>
-</body>
+</pre>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px"></td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table><tr><td height="100"></td></tr></table>
+  </body>
 </html>

@@ -3,6 +3,7 @@ package com.adactinhotelapp.base;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -37,9 +38,13 @@ public class BaseTest {
 
 	
 	@AfterMethod
-	public void closeBrowser() throws InterruptedException
+	public void closeBrowser(ITestResult result) throws InterruptedException
 	{
 		Thread.sleep(5000);
+		if(!result.isSuccess())
+		{
+		ChainTestListener.embed(diverFactory.getScreenshotFile(),"image/png");
+		}
 		driver.quit();
 		ChainTestListener.log("Browser closed...");
 	}

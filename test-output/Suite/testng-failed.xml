@@ -5,11 +5,22 @@
     <classes>
       <class name="com.adactinhotelapp.tests.ValidateSearchHotelPagePF">
         <methods>
+          <include name="closeBrowser"/>
           <include name="ValidateSearchHotelTest" invocation-numbers="0"/>
-          <include name="teardown"/>
+          <include name="appLaunch"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.adactinhotelapp.tests.ValidateSearchHotelPagePF -->
+      <class name="com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF">
+        <methods>
+          <include name="ValidateLoginTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="appLaunch"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

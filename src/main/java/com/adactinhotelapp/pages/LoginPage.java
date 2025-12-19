@@ -72,7 +72,7 @@ public class LoginPage extends BasePage{
 		 */
 		
 		usernameTextbox(configProp.getProperty("username"));
-		usernameTextbox(configProp.getProperty("password"));
+		passwordTextbox(configProp.getProperty("password"));
 		
 		loginButton();
 	}

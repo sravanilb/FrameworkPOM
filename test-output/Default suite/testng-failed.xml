@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.adactinhotelapp.tests.ValidateSearchHotelPagePF">
+      <class name="com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF">
         <methods>
-          <include name="ValidateSearchHotelTest" invocation-numbers="0"/>
-          <include name="teardown"/>
+          <include name="ValidateLoginTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="appLaunch"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.adactinhotelapp.tests.ValidateSearchHotelPagePF -->
+      </class> <!-- com.adactinhotelapp.tests.ValidateLoginUsingPOMUsingPF -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
